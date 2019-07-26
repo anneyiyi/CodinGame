@@ -21,20 +21,20 @@ while True:
     # Write an action using print
     # To debug: print("Debug messages...", file=sys.stderr)
 
-    x_move = ''
-    y_move = ''
+    x = ''
+    y = ''
     if initial_tx > light_x:
-        x_move = 'W'
+        x = 'W'
         initial_tx -= 1
     elif initial_tx < light_x:
-        x_move = 'E'
+        x = 'E'
         initial_tx += 1
 
     if initial_ty > light_y:
-        y_move = 'N'
+        y = 'N'
         initial_ty -= 1
     elif initial_ty < light_y:
-        y_move = 'S'
+        y = 'S'
         initial_ty += 1
     # A single line providing the move to be made: N NE E SE S SW W or NW
-    print('{}{}'.format(y_move,x_move))
+    print('{}{}'.format(y,x))
